@@ -4,4 +4,4 @@ const Result=() =>{
     return(<div>결과화면입니다.</div>)
 }
 
-export default Home;
+export default Result;

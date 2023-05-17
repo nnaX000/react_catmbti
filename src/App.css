@@ -1,0 +1,8 @@
+.App{
+    font-family: "Dovemayo_wild";
+}
+
+@font-face {
+    font-family: "Dovemayo_wild";
+    src: url(/src/assets/fonts/Dovemayo_wild.ttf);
+}

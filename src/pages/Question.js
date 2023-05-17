@@ -4,9 +4,9 @@ import React from 'react';
 const Question=() =>{
     return(
     <>
-        <div>헤더입니다.</div>
+        <div>질문화면입니다.</div>
     </>
     )
 }
 
-export default Home;
+export default Question;
