@@ -7,10 +7,10 @@ import { QuestionData } from '../assets/data/questiondata';
 const Question=() =>{
     return( <Wrapper>
         <ProgressBar striped variant="danger" now={80} style={{marginTop:'20px'}}/>
-        <Title>나는 문제입니다.</Title>
+        <Title>{QuestionData}[0].title</Title>
         <ButtonGroup>
-            <Button style={{width:"40%", minHeight:"200px",fontSize:"15pt"}}>나는 답변1번입니다.</Button>
-            <Button style={{width:"40%", minHeight:"200px",fontSize:"15pt",marginLeft:"20px"}}>나는 답변2번입니다.</Button>
+            <Button style={{width:"40%", minHeight:"200px",fontSize:"15pt"}}>{QuestionData}[0].answer</Button>
+            <Button style={{width:"40%", minHeight:"200px",fontSize:"15pt",marginLeft:"20px"}}>{QuestionData}[0].answerb</Button>
         </ButtonGroup>
     </Wrapper>)
 }
