@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {ProgressBar, Button} from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { createSearchParams, useNavigate } from 'react-router-dom';
 import { QuestionData } from '../assets/data/questiondata';
 
 
@@ -23,10 +23,23 @@ const Question=() =>{
         );
     
         setTotalScore(newScore);
+        
         if(QuestionData.length!==questionNo+1){
             setQuestionNo(questionNo+1);
         }else{
-            navigate("/result");
+            //mbti도출
+            const mbti=newScore.reduce(
+                (acc,curr)=>
+                    acc+(curr.score>=2 ? curr.id.substring(0,1):curr.id.substring(1,2)),
+                    ""
+            );
+            //console.log('mbti',mbti);
+            navigate({
+                pathname:"/result",
+                search:`?${createSearchParams({
+                    mbti: mbti,
+                })}`
+            });
         }
           
     
